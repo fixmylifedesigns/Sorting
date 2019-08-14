@@ -4,10 +4,10 @@ def merge( arrA, arrB ):
     merged_arr = [0] * elements
     # TO-DO
     x, y = 0, 0
-    for i in range(elemets):
+    for i in range(elements):
         if len(arrA) == x:
             for j in range(y, len(arrB)):
-                merge_arr[i + j - y] = arrB[j]
+                merged_arr[i + j - y] = arrB[j]
             return merged_arr
         elif len(arrB) == y:
             for j in range(x, len(arrA)):
@@ -31,7 +31,7 @@ def merge_sort( arr ):
         return arr
 
     split = len(arr) // 2
-    return merge(merge_sort(arr[:split]), merge_sort([split:]))
+    return merge(merge_sort(arr[:split]), merge_sort(arr[split:]))
 
 
 
